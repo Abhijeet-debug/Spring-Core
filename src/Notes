@@ -1,0 +1,67 @@
+* this is how we define beans in config.xml file 
+
+<bean class="com.springcore1.Student" name="student1">
+		<property name="studentId">
+			<value>1234</value>
+		</property>
+
+		<property name="studentName">
+			<value>Abhijeet</value>
+		</property>
+
+		<property name="studentAddres">
+			<value>Pune</value>
+		</property>
+</bean>
+
+
+** Important XML file template for Spring Core project **
+ <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- this is our beans -->
+	<bean class="com.springcore.Student" name="student1"  p:studentId="24234" p:studentName="Ram Singh" p:studentAddress="Delhi"    />
+
+	<!-- second bean  -->
+	<bean class="com.springcore.Student" name="student2"  p:studentId="1341" p:studentName="Shyam Singh" p:studentAddress="Lucknow" />
+
+	
+</beans>
+
+
+
+** Another way to configure beans for setter injection
+<!-- this is our beans -->
+	<bean class="com.springcore1.Student" name="student1">
+		<property name="studentId" value="1234" />
+
+		<property name="studentName" value="Vidit" />
+
+		<property name="studentAddres" value="Indore" />
+
+	</bean>
+	
+** we can also use p schema for configuration bean in XML file
+ first add this in beans tag 
+ xmlns:p="http://www.springframework.org/schema/p"
+ then write like this
+ 
+ <!-- this is our beans -->
+	<bean class="com.springcore1.Student" name="student1"
+		p:studentId="1234" p:studentName="Vidit" p:studentAddres="Indore" />
+
+	<!-- this is our second bean -->
+
+	<bean class="com.springcore1.Student" name="student2"
+		p:studentId="1245" p:studentName="Abhijeet" p:studentAddres="Pune" />
+ 
+
+	
+	
