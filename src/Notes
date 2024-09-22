@@ -91,3 +91,11 @@
 	or we need to use this 
    http://www.springframework.org/schema/util
     http://www.springframework.org/schema/util/spring-util.xsd	
+    
+ ** To use stereo type Annotation like @component @value
+    we need to Specify 
+    <context:component-scan base-package="" /> in the Xml file   
+    
+    Note :- to use collection with @value
+    we need to use util Schema in Xml file and create the standalone Collection in XMl file pass the id in the 
+    @value("#{id_name}")  // this type of invoking id is by Spring Expression Language
