@@ -84,4 +84,10 @@
 ** Notes :- to use and enable all annotation we need to specify 
            <context:annotation-config />  this tag in our XML file. 
            this will enable all the Annotations in our project . 	
-	
+           
+** Standalone Collection 
+   for making Standalone Collecction we need to use util Schema
+   xmlns:util="http://www.springframework.org/schema/util"           
+	or we need to use this 
+   http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd	
